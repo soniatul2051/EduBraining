@@ -1,0 +1,861 @@
+[
+  {
+  "course_name": "Data Analytics",
+  "slug": "datascience",
+  "category": "technical",
+  "sections": [
+    {
+      "section_no": 1,
+      "section_name": "Introduction to Excel",
+      "section_lectures": [
+        {
+          "lecture_no": 1,
+          "lecture_name": "Introduction to Excel",
+          "lecture_cloud_link": { 
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Introduction to Excel"
+          },
+          "lecture_file_path": "Introduction to Excel"
+        },
+        {
+          "lecture_no": 2,
+          "lecture_name": "Exploring Excel",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Exploring Excel"
+          },
+          "lecture_file_path": "Exploring Excel"
+        },
+        {
+          "lecture_no": 3,
+          "lecture_name": "Formulas used in Excel",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Formulas used in Excel"
+          },
+          "lecture_file_path": "Formulas used in Excel"
+        },
+        {
+          "lecture_no": 4,
+          "lecture_name": "Why Visualization?",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Why Visualization?"
+          },
+          "lecture_file_path": "Why Visualization?"
+        },
+        {
+          "lecture_no": 5,
+          "lecture_name": "Shortcuts in Excel",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Shortcuts in Excel"
+          },
+          "lecture_file_path": "Shortcuts in Excel"
+        }
+      ]
+    },
+    {
+      "section_no": 2,
+      "section_name": "Excel Data Management",
+      "section_lectures": [
+        {
+          "lecture_no": 6,
+          "lecture_name": "Understanding Sorting",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Understanding Sorting"
+          },
+          "lecture_file_path": "Understanding Sorting"
+        },
+        {
+          "lecture_no": 7,
+          "lecture_name": "Understanding Filtering",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Understanding Filtering"
+          },
+          "lecture_file_path": "Understanding Filtering"
+        },
+        {
+          "lecture_no": 8,
+          "lecture_name": "Understanding Formatting",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics Mastery",
+            "file_name": "Understanding Formatting"
+          },
+          "lecture_file_path": "Understanding Formatting"
+        } 
+      ]
+    },
+    {
+      "section_no": 3,
+      "section_name": "Advanced Excel Features",
+      "section_lectures": [
+        {
+          "lecture_no": 9,
+          "lecture_name": "Drop Down List (Part-1)",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Drop Down List (Part-1)"
+          },
+          "lecture_file_path": "Drop Down List (Part-1)"
+        },
+        {
+          "lecture_no": 10,
+          "lecture_name": "Drop Down List (Part-2)",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Drop Down List (Part-2)"
+          },
+          "lecture_file_path": "Drop Down List (Part-2)"
+        },
+        {
+          "lecture_no": 11,
+          "lecture_name": "Split in Excel",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Split in Excel"
+          },
+          "lecture_file_path": "Split in Excel"
+        }
+      ]
+    },
+    {
+      "section_no": 4,
+      "section_name": "Excel Visualization",
+      "section_lectures": [
+        {
+          "lecture_no": 12,
+          "lecture_name": "Understanding Charts",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Understanding Charts"
+          },
+          "lecture_file_path": "Understanding Charts"
+        },
+        {
+          "lecture_no": 13,
+          "lecture_name": "Understanding Charts (Part-2)",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Understanding Charts (Part-2)"
+          },
+          "lecture_file_path": "Understanding Charts (Part-2)"
+        },
+        {
+          "lecture_no": 14,
+          "lecture_name": "Understanding Charts (Practically)",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Understanding Charts (Practically)"
+          },
+          "lecture_file_path": "Understanding Charts (Practically)"
+        } 
+      ]
+    },
+    {
+      "section_no": 5,
+      "section_name": "Practical Excel Techniques",
+      "section_lectures": [
+        {
+          "lecture_no": 15,
+          "lecture_name": "Understanding Sorting (Practically)",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Understanding Sorting (Practically)"
+          },
+          "lecture_file_path": "Understanding Sorting (Practically)"
+        },
+        {
+          "lecture_no": 16,
+          "lecture_name": "Understanding Pivot Tables",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Understanding Pivot Tables"
+          },
+          "lecture_file_path": "Understanding Pivot Tables"
+        },
+        {
+          "lecture_no": 17,
+          "lecture_name": "Understanding Pivot Tables (Practically)",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Understanding Pivot Tables (Practically)"
+          },
+          "lecture_file_path": "Understanding Pivot Tables (Practically)"
+        },
+        {
+          "lecture_no": 18,
+          "lecture_name": "Understanding Pivot Charts",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Understanding Pivot Charts"
+          },
+          "lecture_file_path": "Understanding Pivot Charts"
+        } 
+      ]
+    },
+    {
+      "section_no": 6,
+      "section_name": "Excel Formula & Analysis",
+      "section_lectures": [
+        {
+          "lecture_no": 19,
+          "lecture_name": "Formula Analysis",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Formula Analysis"
+          },
+          "lecture_file_path": "Formula Analysis"
+        }
+      ]
+    },
+    {
+      "section_no": 7,
+      "section_name": "Excel Project & Quiz",
+      "section_lectures": [
+        {
+          "lecture_no": 20,
+          "lecture_name": "Project 1: Understanding Excel Practically",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Project 1: Understanding Excel Practically"
+          },
+          "lecture_file_path": "Project 1: Understanding Excel Practically"
+        },  
+        {
+          "lecture_no": 21,
+          "lecture_name": "Project 1: Understanding Excel Practically (Part-2)",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Project 1: Understanding Excel Practically (Part-2)"
+          },
+          "lecture_file_path": "Project 1: Understanding Excel Practically (Part-2)"
+        },  
+        {
+          "lecture_no": 22,
+          "lecture_name": "A Quick Quiz - Based on Excel",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "A Quick Quiz - Based on Excel"
+          },
+          "lecture_file_path": "A Quick Quiz - Based on Excel"
+        }  
+      ]
+    },
+    { 
+      "section_no": 8,
+      "section_name": "Introduction to SQL",
+      "section_lectures": [
+        {
+          "lecture_no": 23,
+          "lecture_name": "Introduction to Structured Query Language (SQL)",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Introduction to Structured Query Language (SQL)"
+          },
+          "lecture_file_path": "Introduction to Structured Query Language (SQL)"
+        },  
+        {
+          "lecture_no": 24,
+          "lecture_name": "SQL - Queries & Types",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "SQL - Queries & Types"
+          },
+          "lecture_file_path": "SQL - Queries & Types"
+        },  
+        {
+          "lecture_no": 25,
+          "lecture_name": "SQL - Queries & Types (Part-2)",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "SQL - Queries & Types (Part-2)"
+          },
+          "lecture_file_path": "SQL - Queries & Types (Part-2)"
+        },  
+        {
+          "lecture_no": 26,
+          "lecture_name": "SQL Commands",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "SQL Commands"
+          },
+          "lecture_file_path": "SQL Commands"
+        },  
+        {
+          "lecture_no": 27,
+          "lecture_name": "SQL: Data Types",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "SQL: Data Types"
+          },
+          "lecture_file_path": "SQL: Data Types"
+        } 
+      ]
+    },
+    {
+      "section_no": 9,
+      "section_name": "SQL Demonstration & Functions",
+      "section_lectures": [
+        {
+          "lecture_no": 28,
+          "lecture_name": "SQL Demonstration",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "SQL Demonstration"
+          },
+          "lecture_file_path": "SQL Demonstration"
+        }, 
+        {
+          "lecture_no": 29,
+          "lecture_name": "SQL Demonstration (Part-2)",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "SQL Demonstration (Part-2)"
+          },
+          "lecture_file_path": "SQL Demonstration (Part-2)"
+        }, 
+        {
+          "lecture_no": 30,
+          "lecture_name": "SQL Demonstration (Part-3)",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "SQL Demonstration (Part-3)"
+          },
+          "lecture_file_path": "SQL Demonstration (Part-3)"
+        }, 
+        {
+          "lecture_no": 31,
+          "lecture_name": "Understanding Aggregate Functions",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Understanding Aggregate Functions"
+          },
+          "lecture_file_path": "Understanding Aggregate Functions"
+        }, 
+        {
+          "lecture_no": 32,
+          "lecture_name": "Alias: Orderby, Groupby",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Alias: Orderby, Groupby"
+          },
+          "lecture_file_path": "Alias: Orderby, Groupby"
+        }, 
+        {
+          "lecture_no": 33,
+          "lecture_name": "Understanding Subquery",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Understanding Subquery"
+          },
+          "lecture_file_path": "Understanding Subquery"
+        }, 
+        {
+          "lecture_no": 34,
+          "lecture_name": "Understanding Joins",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Understanding Joins"
+          },
+          "lecture_file_path": "Understanding Joins"
+        }
+      ]
+    },
+    {
+      "section_no": 10,
+      "section_name": "SQL Advanced Demonstrations",
+      "section_lectures": [
+        {
+          "lecture_no": 35,
+          "lecture_name": "SQL Demonstration (Part-4)",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "SQL Demonstration (Part-4)"
+          },
+          "lecture_file_path": "SQL Demonstration (Part-4)"
+        },
+        {
+          "lecture_no": 36,
+          "lecture_name": "SQL Demonstration (Part-5)",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "SQL Demonstration (Part-5)"
+          },
+          "lecture_file_path": "SQL Demonstration (Part-5)"
+        } 
+       
+      ]
+    },
+    {
+      "section_no": 11,
+      "section_name": "SQL Summary & Interview Questions",
+      "section_lectures": [
+        {
+          "lecture_no": 37,
+          "lecture_name": "Summary (SQL)",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Summary (SQL)"
+          },
+          "lecture_file_path": "Summary (SQL)"
+        }, 
+        {
+          "lecture_no": 38,
+          "lecture_name": "Interview Questions based on SQL",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Interview Questions based on SQL"
+          },
+          "lecture_file_path": "Interview Questions based on SQL"
+        } ,
+        {
+          "lecture_no": 39,
+          "lecture_name": "Interview Questions based on SQL (Part-2)",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Interview Questions based on SQL (Part-2)"
+          },
+          "lecture_file_path": "Interview Questions based on SQL (Part-2)"
+        } 
+       
+      ]
+    },
+    {
+      "section_no": 12,
+      "section_name": "Introduction to Python",
+      "section_lectures": [
+        {
+          "lecture_no": 40,
+          "lecture_name": "Introduction to Python",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Introduction to Python"
+          },
+          "lecture_file_path": "Introduction to Python"
+        }, 
+        {
+          "lecture_no": 41,
+          "lecture_name": "Understanding Python Libraries",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Understanding Python Libraries"
+          },
+          "lecture_file_path": "Understanding Python Libraries"
+        },
+        {
+          "lecture_no": 42,
+          "lecture_name": "Introduction to Pandas",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Introduction to Pandas"
+          },
+          "lecture_file_path": "Introduction to Pandas"
+        },
+        {
+          "lecture_no": 43,
+          "lecture_name": "Overview of Python",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Overview of Python"
+          },
+          "lecture_file_path": "Overview of Python"
+        }
+      ]
+    },
+    {
+      "section_no": 13,
+      "section_name": "Data Pre-processing & Analysis in Python",
+      "section_lectures": [
+        {
+          "lecture_no": 44,
+          "lecture_name": "Understanding Data Pre-processing",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Understanding Data Pre-processing"
+          },
+          "lecture_file_path": "Understanding Data Pre-processing"
+        }, 
+        {
+          "lecture_no": 45,
+          "lecture_name": "Understanding Data Pre-processing (Part-2)",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Understanding Data Pre-processing (Part-2)"
+          },
+          "lecture_file_path": "Understanding Data Pre-processing (Part-2)"
+        },
+        {
+          "lecture_no": 46,
+          "lecture_name": "Understanding Exploratory Data Analysis (EDA)",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Understanding Exploratory Data Analysis (EDA)"
+          },
+          "lecture_file_path": "Understanding Exploratory Data Analysis (EDA)"
+        },
+        {
+          "lecture_no": 47,
+          "lecture_name": "Understanding Exploratory Data Analysis (EDA) (Part-2)",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Understanding Exploratory Data Analysis (EDA) (Part-2)"
+          },
+          "lecture_file_path": "Understanding Exploratory Data Analysis (EDA) (Part-2)"
+        }
+      ]
+    },
+    {
+      "section_no": 14,
+      "section_name": "Python Tips, Projects & Interview Questions",
+      "section_lectures": [
+        {
+          "lecture_no": 48,
+          "lecture_name": "Tips Used in Python",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Tips Used in Python"
+          },
+          "lecture_file_path": "Tips Used in Python"
+        }, 
+        {
+          "lecture_no": 49,
+          "lecture_name": "Project based on Python: Zomato",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Project based on Python: Zomato"
+          },
+          "lecture_file_path": "Project based on Python: Zomato"
+        }, 
+        {
+          "lecture_no": 50,
+          "lecture_name": "One more Project based on Python",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "One more Project based on Python"
+          },
+          "lecture_file_path": "One more Project based on Python"
+        }, 
+        {
+          "lecture_no": 51,
+          "lecture_name": "Interview Questions based on Python",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Interview Questions based on Python"
+          },
+          "lecture_file_path": "Interview Questions based on Python"
+        } 
+      ]
+    },
+    {
+      "section_no": 15,
+      "section_name": "Introduction to Tableau",
+      "section_lectures": [
+        {
+          "lecture_no": 52,
+          "lecture_name": "Understanding Tableau",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Understanding Tableau"
+          },
+          "lecture_file_path": "Understanding Tableau"
+        }, 
+        {
+          "lecture_no": 53,
+          "lecture_name": "Tableau Dashboard Flow",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Tableau Dashboard Flow"
+          },
+          "lecture_file_path": "Tableau Dashboard Flow"
+        }, 
+        {
+          "lecture_no": 54,
+          "lecture_name": "Tableau Dashboard Flow (Part-2)",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Tableau Dashboard Flow (Part-2)"
+          },
+          "lecture_file_path": "Tableau Dashboard Flow (Part-2)"
+        }, 
+        {
+          "lecture_no": 55,
+          "lecture_name": "Tableau Dashboard Flow (Part-3)",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Tableau Dashboard Flow (Part-3)"
+          },
+          "lecture_file_path": "Tableau Dashboard Flow (Part-3)"
+        }, 
+        {
+          "lecture_no": 56,
+          "lecture_name": "Tableau Dashboard Flow (Part-4)",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Tableau Dashboard Flow (Part-4)"
+          },
+          "lecture_file_path": "Tableau Dashboard Flow (Part-4)"
+        }
+       
+      ]
+    },
+    {
+      "section_no": 16,
+      "section_name": "Introduction to Tableau",
+      "section_lectures": [
+        {
+          "lecture_no": 57,
+          "lecture_name": "Pre-Attentive Processing",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Pre-Attentive Processing"
+          },
+          "lecture_file_path": "Pre-Attentive Processing"
+        }, 
+        {
+          "lecture_no": 58,
+          "lecture_name": "Pre-Attentive Processing (Part-2)",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Pre-Attentive Processing (Part-2)"
+          },
+          "lecture_file_path": "Pre-Attentive Processing (Part-2)"
+        }, 
+        {
+          "lecture_no": 59,
+          "lecture_name": "Understanding Data",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Understanding Data"
+          },
+          "lecture_file_path": "Understanding Data"
+        }, 
+        {
+          "lecture_no": 60,
+          "lecture_name": "Techniques to Create Dashboard based on Tableau",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Techniques to Create Dashboard based on Tableau"
+          },
+          "lecture_file_path": "Techniques to Create Dashboard based on Tableau"
+        }, 
+        {
+          "lecture_no": 61,
+          "lecture_name": "Techniques to Create Dashboard based on Tableau (Part-2)",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Techniques to Create Dashboard based on Tableau (Part-2)"
+          },
+          "lecture_file_path": "Techniques to Create Dashboard based on Tableau (Part-2)"
+        },
+        {
+          "lecture_no": 62,
+          "lecture_name": "Techniques to Create Dashboard based on Tableau (Part-3)",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Techniques to Create Dashboard based on Tableau (Part-3)"
+          },
+          "lecture_file_path": "Techniques to Create Dashboard based on Tableau (Part-3)"
+        },
+        {
+          "lecture_no": 63,
+          "lecture_name": "Techniques to Create Dashboard based on Tableau (Part-4)",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Techniques to Create Dashboard based on Tableau (Part-4)"
+          },
+          "lecture_file_path": "Techniques to Create Dashboard based on Tableau (Part-4)"
+        },
+        {
+          "lecture_no": 64,
+          "lecture_name": "Understanding Bullet Charts based on Tableau",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Understanding Bullet Charts based on Tableau"
+          },
+          "lecture_file_path": "Understanding Bullet Charts based on Tableau"
+        }
+       
+      ]
+    },
+    {
+      "section_no": 17,
+      "section_name": "Tableau Project & Quiz",
+      "section_lectures": [ 
+        {
+          "lecture_no": 65,
+          "lecture_name": "A Quick Quiz - Based on Tableau",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "A Quick Quiz - Based on Tableau"
+          },
+          "lecture_file_path": "A Quick Quiz - Based on Tableau"
+        }
+       
+      ]
+    },
+    {
+      "section_no": 18,
+      "section_name": "Conclusion",
+      "section_lectures": [ 
+        {
+          "lecture_no": 66,
+          "lecture_name": "Conclusion",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Conclusion"
+          },
+          "lecture_file_path": "Conclusion"
+        }, 
+        {
+          "lecture_no": 67,
+          "lecture_name": "Excel Analysis",
+          "lecture_cloud_link": {
+            "domain_url": "https://d302zovup67ade.cloudfront.net/",
+            "bucket": "Courses",
+            "folder_name": "Data Analytics",
+            "file_name": "Excel Analysis"
+          },
+          "lecture_file_path": "Excel Analysis"
+        }
+       
+      ]
+    }
+  ]
+}
+
+]
