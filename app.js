@@ -13,7 +13,7 @@ const app = express();
 
 //using middleware
 const corsOptions = {
-  origin: ["http://localhost:3000","https://edubrain.vercel.app"],
+  origin: ["http://localhost:3000","https://edubrain.vercel.app","https://edu-brain-frontend.vercel.app","https://edubraincom.vercel.app"],
   optionsSuccessStatus: 200, // Corrected property name
   credentials: true,
 };
