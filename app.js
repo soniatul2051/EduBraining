@@ -3,13 +3,13 @@ import { config } from "dotenv";
 import ErrorMiddleware from "./middlewares/Error.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
+const app = express();
 
 config({
   path: "./config/config.env",
   
 });
 
-const app = express();
 
 //using middleware
 const corsOptions = {
@@ -35,6 +35,7 @@ import Assignment from "./routes/AssignmentRoute.js";
 import Progress from "./routes/ProgressRoute.js";
 import course from "./routes/courseRoute.js";
 import enrollment from "./routes/EnrollmentRoutes.js";
+import doubt from "./routes/doubtRoutes.js";
 
 app.use("/api/v1", coursedata);
 app.use("/api/v1", user);
@@ -43,6 +44,7 @@ app.use("/api/v1", Assignment);
 app.use("/api/v1", Progress);
 app.use("/api/v1", course);
 app.use("/api/v1", enrollment);
+app.use("/api/v1", doubt);
 // app.use('/api/v1', courseRoutes);
 
 app.get("/", (req, res) => {

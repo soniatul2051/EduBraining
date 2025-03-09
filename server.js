@@ -2,7 +2,6 @@ import app from "./app.js";
 import { connectDB } from "./config/database.js";
 import cloudinary from "cloudinary";
 import { config } from "dotenv";
-
 app.get("/", (req, res) => {
   res.send("Welcome to EduBrain Backend.. Server is running..");
 });
