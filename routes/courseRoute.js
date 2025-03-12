@@ -11,7 +11,6 @@ const router = express.Router();
 
 router.get('/coursesdata', getAllCourses);
 router.get('/coursesdatabyid/:id', getCourseById);
-// router.get('/coursesdata/:slug', isAuthenticated, getCourseBySlug);
 router.get('/coursesdata/:slug', getCourseBySlug);  
 
 // // ================================

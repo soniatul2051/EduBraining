@@ -31,6 +31,27 @@ const verifyWebhookSignature = (webhookBody, signature, webhookSecret) => {
 };
 
 
+const sendSuccessfulEmail = async (course ,email) => {
+  const transporter = nodemailer.createTransport({
+      service: "gmail",
+
+      auth: {
+          user: process.env.MAIL_USER,
+          pass: process.env.MAIL_PASS
+      }
+  });
+
+  const mailOptions = {
+      from: process.env.MAIL_USER,
+      to: email,
+      subject: `You have Successfully Enrolled in ${course} Course.`,
+      text: `Congratulations! You have successfully enrolled in the ${course}  Course. Start Your learning Journey today`
+  };
+
+  await transporter.sendMail(mailOptions);
+};
+
+
 export const razorpayWebhook = catchAsyncError(async (req, res, next) => {
   // Verify webhook signature
   const signature = req.headers['x-razorpay-signature'];
@@ -53,6 +74,8 @@ export const razorpayWebhook = catchAsyncError(async (req, res, next) => {
     const courseNameTitle = paymentData.notes.product;
 
     await processEnrollment(userEmail, courseNameTitle, paymentData);
+
+    await sendSuccessfulEmail(courseNameTitle , userEmail);
   
   }
 
