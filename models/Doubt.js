@@ -18,9 +18,13 @@ const doubtSchema = new mongoose.Schema({
     status: {
         type: String,
         enum: ['pending', 'resolved'],
-        default: 'pending'
+        default: ''
     },
     mentorResponse: {
+        type: String,
+        default: ''
+    },
+    mentorFileUrl: { 
         type: String,
         default: ''
     },

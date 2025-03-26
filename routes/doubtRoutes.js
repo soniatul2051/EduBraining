@@ -14,7 +14,7 @@ router.get('/student-doubt/:studentId', getDoubts);
 router.get('/all-doubt', getAllDoubts);
 
 // Update doubt status and mentor response
-router.put('/update-doubt/:id', updateDoubt);
+router.put('/update-doubt/:id', upload.single('file'),updateDoubt);
 
 // Delete a doubt
 router.delete('/delete-doubt/:id', deleteDoubt);
