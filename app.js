@@ -44,7 +44,25 @@ app.use(cors(corsOptions));
 app.options("*", cors(corsOptions));
 
 // Routes
-// ... (your existing route imports and mounting) ...
+// Route imports
+import coursedata from "./routes/coursedataRoute.js";
+import user from "./routes/userRoutes.js";
+import Submissions from "./routes/submissionRoute.js";
+import Assignment from "./routes/AssignmentRoute.js";
+import Progress from "./routes/ProgressRoute.js";
+import course from "./routes/courseRoute.js";
+import enrollment from "./routes/EnrollmentRoutes.js";
+import doubt from "./routes/doubtRoutes.js";
+
+// Route mounting
+app.use("/api/v1", coursedata);
+app.use("/api/v1", user);
+app.use("/api/v1", Submissions);
+app.use("/api/v1", Assignment);
+app.use("/api/v1", Progress);
+app.use("/api/v1", course);
+app.use("/api/v1", enrollment);
+app.use("/api/v1", doubt);
 
 // Error Handling
 app.use(ErrorMiddleware);
