@@ -85,21 +85,21 @@ export const deleteUsersWithExpiredOTP = catchAsyncError(async () => {
 export const login = catchAsyncError(async (req, res, next) => {
   const { email, password } = req.body;
   if (!email || !password)
-    return next(new ErrorHandler("Please enter all filed"), 400);
+    return next(new ErrorHandler("Please enter all fields", 400));
 
   const user = await User.findOne({ email }).select("+password");
 
   if (!user) return next(new ErrorHandler("Incorrect Email or Password", 400));
-  if (user.otp.code !== null) return next(new ErrorHandler("Please Verify OTP", 400));
+  if (user.otp.code !== null)
+    return next(new ErrorHandler("Please Verify OTP", 400));
 
   const isMatch = await user.comparePassword(password);
-
   if (!isMatch)
     return next(new ErrorHandler("Incorrect Email or Password", 400));
 
-
-  sendToken(res, user, `Welcome back ${user.name}`, 201);
+  sendToken(res, user, `Welcome back ${user.name}`, 200);
 });
+
 
 //logout
 export const logout = catchAsyncError(async (req, res, next) => {

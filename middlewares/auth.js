@@ -18,7 +18,6 @@ import { User } from "../models/User.js";
 export const isAuthenticated = catchAsyncError(async (req, res, next) => {
   let token;
 
-  // 1. Check token in Authorization header
   if (
     req.headers.authorization &&
     req.headers.authorization.startsWith("Bearer")
@@ -26,7 +25,6 @@ export const isAuthenticated = catchAsyncError(async (req, res, next) => {
     token = req.headers.authorization.split(" ")[1];
   }
 
-  // 2. Fallback: Check token in cookies
   if (!token && req.cookies.token) {
     token = req.cookies.token;
   }
