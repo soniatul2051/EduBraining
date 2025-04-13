@@ -23,7 +23,17 @@ const CourseSchema = new Schema({
   courseDetails: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'CourseDetails'
-  }
+  },
+  poster: {
+    public_id: {
+      type: String,
+      required: true
+    },
+    url: {
+      type: String,
+      required: true
+    }
+  },
 }, {
   timestamps: {
     createdAt: 'addDate',
