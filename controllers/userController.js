@@ -9,18 +9,19 @@ import crypto from "crypto";
 export const register = catchAsyncError(async (req, res, next) => {
   const { name, email, password, confirmPassword } = req.body;
 
-  if (!name || !email || !password || !confirmPassword)
-    return next(new ErrorHandler("Please enter all filed"), 400);
+  console.log("Register request received:", { name, email });
 
-  if (password != confirmPassword)
+  if (!name || !email || !password || !confirmPassword)
+    return next(new ErrorHandler("Please enter all fields", 400));
+
+  if (password !== confirmPassword)
     return next(
-      new ErrorHandler("Password and Confirm password is not matching"),
-      400
+      new ErrorHandler("Password and Confirm password do not match", 400)
     );
 
   let user = await User.findOne({ email });
 
-  if (user) return next(new ErrorHandler("User Already Exist", 409));
+  if (user) return next(new ErrorHandler("User Already Exists", 409));
 
   user = await User.create({
     name,
@@ -31,18 +32,23 @@ export const register = catchAsyncError(async (req, res, next) => {
   const OTP = user.generateOTP();
   await user.save();
 
-
-  console.log(OTP);
+  console.log("Generated OTP:", OTP);
   const message = `Your OTP is ${OTP.code}, It will Expire in 10 minutes`;
-  await sendEmail(user.email, "Edubrain Verification OTP", message);
-  console.log(message);
+  console.log("Email message:", message);
+
+  try {
+    await sendEmail(user.email, "Edubrain Verification OTP", message);
+    console.log("Email sent successfully");
+  } catch (error) {
+    console.error("Email sending failed:", error.message);
+    return next(new ErrorHandler("Failed to send OTP email", 500));
+  }
+
   res.status(201).json({
     success: true,
     message: "Pending Verification, We have sent you an OTP to your email",
   });
-
 });
-
 //VerifyOTP
 export const  otpVerification = catchAsyncError(async (req, res, next) => {
   const { email, OTP } = req.body;
@@ -186,15 +192,22 @@ export const forgotPassword = catchAsyncError(async (req, res, next) => {
   await user.save();
 
   const url = `${process.env.FRONTEND_URL}/resetpassword/${resetToken}`;
+  const message = `Click on the link to reset your password: ${url}. If you have not requested this, please ignore.`;
 
-  const message = `Click on the link to reset your password.${url}. if you have not requested than please ignore`;
-
-  await sendEmail(user.email, "Edubrain Reset Password", message);
-
-  res.status(200).json({
-    success: true,
-    message: `Reset Token Has Been sent To ${user.email}`,
-  });
+  try {
+    await sendEmail(user.email, "Edubrain Reset Password", message);
+    console.log(`Reset password email sent successfully to ${user.email}`);
+    res.status(200).json({
+      success: true,
+      message: `Reset Token Has Been Sent To ${user.email}`,
+    });
+  } catch (error) {
+    console.error("Failed to send reset password email:", error.message);
+    user.resetPasswordToken = undefined;
+    user.resetPasswordExpire = undefined;
+    await user.save();
+    return next(new ErrorHandler("Failed to send reset email", 500));
+  }
 });
 
 //reset password
