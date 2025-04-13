@@ -29,7 +29,7 @@ export const getCourseById = async (req, res) => {
     try {
       const courseSlug = req.params.slug;
       const course = await Course.findOne({ slug: courseSlug });
-  
+       
       if (!course) {
         return res.status(404).json({ message: 'Course not found' });
       }

@@ -3,6 +3,8 @@ import { connectDB } from "./config/database.js";
 import cloudinary from "cloudinary";
 import { config } from "dotenv";
 import morgan from "morgan";
+import dotenv from "dotenv";
+dotenv.config();
 
 // Load env variables
 config({ path: ".env" }); // Adjust to "./config/config.env" if needed
