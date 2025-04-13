@@ -1,5 +1,6 @@
 
 import { Course } from "../models/Course.js";
+import { courseDetails } from "../models/CourseDetails.js";
 
 export const getAllCourses = async (req, res) => {
   try {
@@ -28,7 +29,7 @@ export const getCourseById = async (req, res) => {
   export const getCourseBySlug = async (req, res) => {
     try {
       const courseSlug = req.params.slug;
-      const course = await Course.findOne({ slug: courseSlug });
+      const course = await courseDetails.findOne({ slug: courseSlug });
   
       if (!course) {
         return res.status(404).json({ message: 'Course not found' });
