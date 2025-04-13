@@ -10,20 +10,18 @@ config({ path: "./config/config.env" });
 
 const app = express();
 
-// CORS Configuration
-const allowedOrigins = [
-  "http://localhost:3000",
-  "https://edubrain.vercel.app",
-  "https://edu-brain-frontend.vercel.app",
-  "https://edubraincom.vercel.app",
-  "https://edubrain.onrender.com",
-  "https://edubraining.onrender.com",
-  ""
-];
-
+// Enhanced CORS Configuration
 const corsOptions = {
-  origin: function (origin, callback) {
-    // Allow requests with no origin (like mobile apps or curl requests)
+  origin: (origin, callback) => {
+    const allowedOrigins = [
+      "http://localhost:3000",
+      "https://edubrain.vercel.app",
+      "https://edu-brain-frontend.vercel.app",
+      "https://edubraincom.vercel.app",
+      "https://edubrain.onrender.com",
+      "https://edubraining.onrender.com"
+    ];
+    
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
@@ -32,9 +30,9 @@ const corsOptions = {
     }
   },
   credentials: true,
-  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With", "Accept"],
-  exposedHeaders: ["Content-Length", "X-Foo", "X-Bar"]
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  optionsSuccessStatus: 200
 };
 
 // Middleware
@@ -43,59 +41,34 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(morgan("dev"));
 app.use(cors(corsOptions));
-
-// Handle preflight requests
 app.options("*", cors(corsOptions));
 
-// Route imports
-import coursedata from "./routes/coursedataRoute.js";
-import user from "./routes/userRoutes.js";
-import Submissions from "./routes/submissionRoute.js";
-import Assignment from "./routes/AssignmentRoute.js";
-import Progress from "./routes/ProgressRoute.js";
-import course from "./routes/courseRoute.js";
-import enrollment from "./routes/EnrollmentRoutes.js";
-import doubt from "./routes/doubtRoutes.js";
+// Routes
+// ... (your existing route imports and mounting) ...
 
-// Route mounting
-app.use("/api/v1", coursedata);
-app.use("/api/v1", user);
-app.use("/api/v1", Submissions);
-app.use("/api/v1", Assignment);
-app.use("/api/v1", Progress);
-app.use("/api/v1", course);
-app.use("/api/v1", enrollment);
-app.use("/api/v1", doubt);
-
-// Health check endpoint
-app.get("/", (req, res) => {
-  res.status(200).json({
-    success: true,
-    message: "EduBrain API is running",
-    timestamp: new Date().toISOString(),
-    uptime: process.uptime()
-  });
-});
-
-// 404 Handler
-app.use((req, res, next) => {
-  res.status(404).json({
-    success: false,
-    message: "Route not found",
-    requestedUrl: req.originalUrl
-  });
-});
-
-// Error middleware
+// Error Handling
 app.use(ErrorMiddleware);
 
-// Server configuration
+// Port Configuration with Fallback
 const PORT = process.env.PORT || 4000;
-const ENV = process.env.NODE_ENV || "development";
+const getAvailablePort = async (startPort) => {
+  const net = await import('net');
+  const server = net.createServer();
+  
+  return new Promise((resolve) => {
+    server.on('error', () => resolve(getAvailablePort(startPort + 1)));
+    server.listen(startPort, () => {
+      server.close(() => resolve(startPort));
+    });
+  });
+};
 
-app.listen(PORT, () => {
-  console.log(`Server running in ${ENV} mode on port ${PORT}`);
-  console.log(`Allowed CORS origins: ${allowedOrigins.join(", ")}`);
-});
+(async () => {
+  const availablePort = await getAvailablePort(PORT);
+  app.listen(availablePort, () => {
+    console.log(`Server running on port ${availablePort}`);
+    console.log(`Allowed CORS origins: ${corsOptions.origin.toString()}`);
+  });
+})();
 
 export default app;
