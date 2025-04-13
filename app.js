@@ -21,6 +21,7 @@ const corsOptions = {
     "https://edubrain.vercel.app",
     "https://edu-brain-frontend.vercel.app",
     "https://edubraincom.vercel.app",
+    "https://edubrain.onrender.com/",
   ],
   optionsSuccessStatus: 200,
   credentials: true,
