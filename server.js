@@ -2,14 +2,14 @@ import app from "./app.js";
 import { connectDB } from "./config/database.js";
 import cloudinary from "cloudinary";
 import dotenv from "dotenv";
-import morgan from "morgan";
+// import morgan from "morgan";
 import net from "net";
 
 // Load environment variables
 dotenv.config({
   path: "./.env"
 });
-console.log("Environment variables loaded in server.js");
+// console.log("Environment variables loaded in server.js");
 
 // Validate critical environment variables
 const validateEnv = () => {
@@ -37,9 +37,6 @@ const validateEnv = () => {
 };
 validateEnv();
 
-// Apply morgan middleware
-app.use(morgan("dev"));
-console.log("Morgan middleware applied");
 
 // Cloudinary configuration
 cloudinary.v2.config({
@@ -48,7 +45,7 @@ cloudinary.v2.config({
   api_secret: process.env.CLOUDINARY_API_SECRET,
   secure: true
 });
-console.log("Cloudinary configured");
+// console.log("Cloudinary configured");rs
 
 // Database connection
 connectDB()

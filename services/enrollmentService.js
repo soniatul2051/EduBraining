@@ -7,41 +7,49 @@ import { Progress } from "../models/Progress.js";
 export async function processEnrollment(userEmail, courseNameTitle, paymentData) {
   const session = await mongoose.startSession();
   session.startTransaction();
-  
-  try {
-    // Find user by email
-    const user = await User.findOne({ email: userEmail }).session(session);
-    if (!user) throw new Error('User not found');
-    
-    // Find course by title
-    const course = await Course.findOne({ title: courseNameTitle }).session(session);
-    if (!course) throw new Error('Course not found');
 
-    // Check if already enrolled
+  try {
+    // Step 1: Find the user
+    const user = await User.findOne({ email: userEmail }).session(session);
+    if (!user) throw new Error("User not found");
+    console.log("✅ User found:", user._id.toString());
+
+    // Step 2: Find the course
+    const course = await Course.findOne({ title: courseNameTitle }).session(session);
+    if (!course) throw new Error("Course not found");
+    console.log("✅ Course found:", course._id.toString());
+
+    // Step 3: Check for existing enrollment
     const existingEnrollment = await Enrollment.findOne({
       user: user._id,
       course: course._id
     }).session(session);
 
-    if (existingEnrollment) throw new Error('User already enrolled in this course');
+    if (existingEnrollment) {
+      console.log("⚠️ Duplicate enrollment found:", existingEnrollment);
+      throw new Error("User already enrolled in this course");
+    }
 
-    // Create new enrollment
-    const enrollment = await Enrollment.create([{
+    // Step 4: Create new enrollment
+    const [newEnrollment] = await Enrollment.create([{
       user: user._id,
       course: course._id,
       paymentAmount: paymentData.amount / 100,
       paymentMethod: paymentData.method,
-      paymentStatus: 'completed',
+      paymentStatus: "completed",
       currency: paymentData.currency,
       razorpayPaymentId: paymentData.id,
     }], { session });
 
-    // Add course to user's enrolledCourses
+    console.log("✅ Enrollment created:", newEnrollment._id.toString());
+
+    // Step 5: Update user's enrolledCourses
     user.enrolledCourses.push(course._id);
     await user.save({ session });
+    console.log("✅ User updated with enrolled course");
 
-    // Create initial progress record
-    await Progress.create([{
+    // Step 6: Create initial progress record
+    const [progress] = await Progress.create([{
       userId: user._id,
       courseId: course._id,
       completedLectures: [],
@@ -49,12 +57,27 @@ export async function processEnrollment(userEmail, courseNameTitle, paymentData)
       lectureProgress: []
     }], { session });
 
+    console.log("✅ Progress created:", progress._id.toString());
+
+    // Step 7: Commit the transaction
     await session.commitTransaction();
-    return enrollment[0];
-  } catch (error) {
-    await session.abortTransaction();
-    throw error;
-  } finally {
     session.endSession();
+
+    return {
+      success: true,
+      message: "Enrollment successful",
+      enrollment: newEnrollment
+    };
+
+  } catch (error) {
+    // Rollback on error
+    await session.abortTransaction();
+    session.endSession();
+
+    console.error("❌ Enrollment failed:", error.message);
+    return {
+      success: false,
+      message: error.message
+    };
   }
 }

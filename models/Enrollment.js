@@ -14,7 +14,7 @@ const EnrollmentSchema = new mongoose.Schema({
   courseDetails: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'CourseDetails',
-    required: true
+    // required: true
   },
   enrollmentDate: {
     type: Date,

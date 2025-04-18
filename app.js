@@ -40,6 +40,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(morgan("dev"));
+
 app.use(cors(corsOptions));
 app.options("*", cors(corsOptions));
 
@@ -85,12 +86,13 @@ const getAvailablePort = async (startPort) => {
   });
 };
 
-(async () => {
-  const availablePort = await getAvailablePort(PORT);
-  app.listen(availablePort, () => {
-    console.log(`Server running on port ${availablePort}`);
-    console.log(`Allowed CORS origins: ${corsOptions.origin.toString()}`);
-  });
-})();
+// (async () => {
+//   const availablePort = await getAvailablePort(PORT);
+//   app.listen(availablePort, () => {
+//     console.log(`Server running on port ${availablePort}`);
+//     // console.log(`Allowed CORS origins: ${corsOptions.origin.toString()}`);
+//   });
+//   app.use(morgan("dev"));
+// })();
 
 export default app;
