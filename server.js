@@ -1,12 +1,14 @@
 import app from "./app.js";
 import { connectDB } from "./config/database.js";
 import cloudinary from "cloudinary";
-import { config } from "dotenv";
+import dotenv from "dotenv";
 import morgan from "morgan";
 import net from "net";
 
 // Load environment variables
-config({ path: "./.env" }); // Changed to standard .env location
+dotenv.config({
+  path: "./.env"
+});
 console.log("Environment variables loaded in server.js");
 
 // Validate critical environment variables
@@ -15,7 +17,10 @@ const validateEnv = () => {
     "MONGO_URI",
     "CLOUDINARY_NAME",
     "CLOUDINARY_API_KEY",
-    "CLOUDINARY_API_SECRET"
+    "CLOUDINARY_API_SECRET",
+    "RAZORPAY_API_KEY",
+    "RAZORPAY_API_SECRET",
+    "RAZORPAY_WEBHOOK_SECRET"
   ];
 
   const missingVars = requiredVars.filter(varName => !process.env[varName]);
@@ -69,7 +74,7 @@ const findAvailablePort = async (startPort) => {
 const startServer = async () => {
   try {
     const port = await findAvailablePort(parseInt(process.env.PORT));
-    
+
     const server = app.listen(port, () => {
       console.log(`Server running on port ${port}`);
       console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);

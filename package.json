@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon server.js",
-    "start": "node server.js",
+    "start": "nodemon -r dotenv/config --experimental-json-modules server.js",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "format": "prettier --write ."
   },
@@ -28,7 +28,7 @@
     "multer": "^1.4.5-lts.1",
     "node-cron": "^3.0.3",
     "nodemailer": "^6.9.9",
-    "razorpay": "^2.9.2",
+    "razorpay": "^2.9.6",
     "socket.io": "^4.8.1",
     "validator": "^13.11.0"
   },

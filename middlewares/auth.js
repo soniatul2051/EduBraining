@@ -23,6 +23,7 @@ export const isAuthenticated = catchAsyncError(async (req, res, next) => {
   ) {
     token = req.headers.authorization.split(" ")[1];
   }
+  // console.log(token);
   
   // Or from cookies
   if (!token && req.cookies.token) {
@@ -32,6 +33,7 @@ export const isAuthenticated = catchAsyncError(async (req, res, next) => {
   if (!token) {
     return next(new ErrorHandler("Not Logged In", 401));
   }
+  // console.log(token);
   
   try {
     // IMPORTANT FIX: Using the same JWT_SECRET used in the User model
@@ -43,6 +45,7 @@ export const isAuthenticated = catchAsyncError(async (req, res, next) => {
     if (!req.user) {
       return next(new ErrorHandler("User no longer exists", 401));
     }
+    // console.log(req.user);
     
     next();
   } catch (error) {

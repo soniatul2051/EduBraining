@@ -1,12 +1,12 @@
 import express from "express";
-import { config } from "dotenv";
+// import { config } from "dotenv";
 import ErrorMiddleware from "./middlewares/Error.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import morgan from "morgan";
 
 // Load environment variables
-config({ path: "./config/config.env" });
+// config({ path: "./.env" });
 
 const app = express();
 
@@ -25,7 +25,7 @@ const corsOptions = {
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
-      console.log('Blocked CORS request from:', origin);
+      // console.log('Blocked CORS request from:', origin);
       callback(new Error('Not allowed by CORS'));
     }
   },
@@ -53,6 +53,9 @@ import Progress from "./routes/ProgressRoute.js";
 import course from "./routes/courseRoute.js";
 import enrollment from "./routes/EnrollmentRoutes.js";
 import doubt from "./routes/doubtRoutes.js";
+import paymentRoutes from "./routes/paymentRoutes.js";
+
+
 
 // Route mounting
 app.use("/api/v1", coursedata);
@@ -63,6 +66,7 @@ app.use("/api/v1", Progress);
 app.use("/api/v1", course);
 app.use("/api/v1", enrollment);
 app.use("/api/v1", doubt);
+app.use("/api/v1/payment", paymentRoutes);
 
 // Error Handling
 app.use(ErrorMiddleware);

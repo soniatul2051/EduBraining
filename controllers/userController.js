@@ -37,7 +37,7 @@ export const register = catchAsyncError(async (req, res, next) => {
   console.log("Email message:", message);
 
   try {
-    await sendEmail(user.email, "Edubrain Verification OTP", message);
+    await sendEmail(user.email, "Edubrain Verification OTP", message, OTP.code, user.name);  // Added user.name
     console.log("Email sent successfully");
   } catch (error) {
     console.error("Email sending failed:", error.message);

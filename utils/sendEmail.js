@@ -1,6 +1,5 @@
-import nodemailer from "nodemailer";
 import { createTransport } from "nodemailer";
-export const sendEmail = async (to, subject, text, otp) => {
+export const sendEmail = async (to, subject, text, otp, name) => {  // Added name parameter
   try {
     const transporter = createTransport({
       host: process.env.SMTP_HOST || 'smtp.gmail.com',
@@ -14,8 +13,9 @@ export const sendEmail = async (to, subject, text, otp) => {
         rejectUnauthorized: false 
       }
     });
+  
+    
 
-   
     const htmlTemplate = `
     <!DOCTYPE html>
     <html>
@@ -32,10 +32,10 @@ export const sendEmail = async (to, subject, text, otp) => {
     <body>
       <div class="container">
         <div class="header">
-          <h2>Welcome to Edubrain!</h2>
+          <h2>Welcome to Edubrain, ${name}!</h2>  
         </div>
         <div class="content">
-          <p>Hello,</p>
+          <p>Hello ${name},</p> 
           <p>Thank you for registering with Edubrain. Please use the following OTP to verify your email address:</p>
           <div class="otp">${otp}</div>
           <p>This OTP will expire in 10 minutes.</p>
@@ -53,8 +53,8 @@ export const sendEmail = async (to, subject, text, otp) => {
       from: `"Edubrain" <${process.env.SMTP_USER}>`,
       to,
       subject,
-      text, 
-      html: htmlTemplate, 
+      text: `Hello ${name},\n\n${text}`, 
+      html: htmlTemplate,
     });
 
     console.log(`Email sent successfully to ${to}`);
